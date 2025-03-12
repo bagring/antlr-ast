@@ -1,0 +1,4 @@
+# test deps
+pytest~=8.3
+codecov~=2.1
+pytest-cov~=6.0

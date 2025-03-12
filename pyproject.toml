@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "antlr-ast"
+version = "0.8.2"
+description = "AST shaping for antlr parsers"
+readme = "README.md"
+authors = [
+    { name = "Michael Chow", email = "michael@datacamp.com" }
+]
+maintainers = [
+    { name = "Jeroen Hermans", email = "content-engineering@datacamp.com" }
+]
+license = { text = "GNU Affero General Public License v3" }
+keywords = ["antlr", "ast", "parser"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU Affero General Public License v3",
+    "Operating System :: OS Independent"
+]
+
+dependencies = [
+    "antlr4-python3-runtime>=4.13.2,<4.14"
+]
+
+[project.urls]
+Homepage = "https://github.com/datacamp/antlr-ast"
+
+[tool.setuptools]
+packages = ["antlr_ast"]

@@ -1,23 +1,23 @@
-# Generated from tests/Expr.g4 by ANTLR 4.7
+# Generated from Expr.g4 by ANTLR 4.13.2
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
-from typing.io import TextIO
 import sys
+if sys.version_info[1] > 5:
+	from typing import TextIO
+else:
+	from typing.io import TextIO
 
 def serializedATN():
-    with StringIO() as buf:
-        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\t")
-        buf.write("\27\4\2\t\2\3\2\3\2\3\2\3\2\3\2\3\2\3\2\3\2\5\2\r\n\2")
-        buf.write("\3\2\3\2\3\2\7\2\22\n\2\f\2\16\2\25\13\2\3\2\2\3\2\3\2")
-        buf.write("\2\3\3\2\3\4\2\30\2\f\3\2\2\2\4\5\b\2\1\2\5\6\7\b\2\2")
-        buf.write("\6\r\5\2\2\5\7\r\7\7\2\2\b\t\7\5\2\2\t\n\5\2\2\2\n\13")
-        buf.write("\7\6\2\2\13\r\3\2\2\2\f\4\3\2\2\2\f\7\3\2\2\2\f\b\3\2")
-        buf.write("\2\2\r\23\3\2\2\2\16\17\f\6\2\2\17\20\t\2\2\2\20\22\5")
-        buf.write("\2\2\7\21\16\3\2\2\2\22\25\3\2\2\2\23\21\3\2\2\2\23\24")
-        buf.write("\3\2\2\2\24\3\3\2\2\2\25\23\3\2\2\2\4\f\23")
-        return buf.getvalue()
-
+    return [
+        4,1,7,21,2,0,7,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,3,0,11,8,0,1,0,
+        1,0,1,0,5,0,16,8,0,10,0,12,0,19,9,0,1,0,0,1,0,1,0,0,1,1,0,1,2,22,
+        0,10,1,0,0,0,2,3,6,0,-1,0,3,4,5,6,0,0,4,11,3,0,0,3,5,11,5,5,0,0,
+        6,7,5,3,0,0,7,8,3,0,0,0,8,9,5,4,0,0,9,11,1,0,0,0,10,2,1,0,0,0,10,
+        5,1,0,0,0,10,6,1,0,0,0,11,17,1,0,0,0,12,13,10,4,0,0,13,14,7,0,0,
+        0,14,16,3,0,0,5,15,12,1,0,0,0,16,19,1,0,0,0,17,15,1,0,0,0,17,18,
+        1,0,0,0,18,1,1,0,0,0,19,17,1,0,0,0,2,10,17
+    ]
 
 class ExprParser ( Parser ):
 
@@ -50,13 +50,15 @@ class ExprParser ( Parser ):
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
-        self.checkVersion("4.7")
+        self.checkVersion("4.13.2")
         self._interp = ParserATNSimulator(self, self.atn, self.decisionsToDFA, self.sharedContextCache)
         self._predicates = None
 
 
 
+
     class ExprContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -192,7 +194,7 @@ class ExprParser ( Parser ):
             self.state = 10
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [ExprParser.NOT]:
+            if token in [6]:
                 localctx = ExprParser.NotExprContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
@@ -202,14 +204,14 @@ class ExprParser ( Parser ):
                 self.state = 4
                 self.expr(3)
                 pass
-            elif token in [ExprParser.INT]:
+            elif token in [5]:
                 localctx = ExprParser.IntegerContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
                 self.state = 5
                 self.match(ExprParser.INT)
                 pass
-            elif token in [ExprParser.T__2]:
+            elif token in [3]:
                 localctx = ExprParser.SubExprContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
@@ -242,7 +244,7 @@ class ExprParser ( Parser ):
                     self.state = 13
                     localctx.op = self._input.LT(1)
                     _la = self._input.LA(1)
-                    if not(_la==ExprParser.T__0 or _la==ExprParser.T__1):
+                    if not(_la==1 or _la==2):
                         localctx.op = self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)

@@ -1,6 +1,0 @@
-antlr4-python3-runtime~=4.7.2
-
-# test deps
-pytest~=3.7.4
-codecov~=2.0.15
-pytest-cov~=2.5.1

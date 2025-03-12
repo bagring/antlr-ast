@@ -1,6 +1,6 @@
-# Generated from tests/Expr.g4 by ANTLR 4.7
+# Generated from Expr.g4 by ANTLR 4.13.2
 from antlr4 import *
-if __name__ is not None and "." in __name__:
+if "." in __name__:
     from .ExprParser import ExprParser
 else:
     from ExprParser import ExprParser

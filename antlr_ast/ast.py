@@ -778,7 +778,7 @@ def get_field_names(ctx: ParserRuleContext) -> List[str]:
         field
         for field in type(ctx).__dict__
         if not field.startswith("__")
-        and field not in ["accept", "enterRule", "exitRule", "getRuleIndex", "copyFrom"]
+        and field not in ["accept", "enterRule", "exitRule", "getRuleIndex", "copyFrom", "parser"]
     ]
     return fields
 
